@@ -10,3 +10,70 @@
 /* 공통스타일 */
 
 /* 네비게이션 */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100vh;
+}
+
+nav > ul {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+}
+nav > ul > li {
+  height: calc(100% / 6);
+  background: #222;
+  color: #fff;
+  font-size: 15.5px;
+  border-bottom: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 0 10%;
+  word-break: keep-all;
+}
+nav > ul > li:last-child {
+  border-bottom: none;
+}
+.active {
+  background: linear-gradient(167.68deg, #9d9d9d 8.4%, #595959 91.15%);
+}
+
+@media (max-width: 1025px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: auto;
+    bottom: 0;
+  }
+  nav > ul {
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+  }
+  nav > ul > li {
+    padding: 15px 10px;
+    height: auto;
+    width: calc(100% / 3);
+    font-size: 12px;
+    border-bottom: 1px solid #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  nav > ul > li:nth-child(4),
+  nav > ul > li:nth-child(5),
+  nav > ul > li:nth-child(6) {
+    border-bottom: none;
+  }
+}
