@@ -17,6 +17,7 @@ nav {
   left: 0;
   width: 100px;
   height: 100vh;
+  z-index: 100;
 }
 
 nav > ul {
@@ -75,5 +76,129 @@ nav > ul > li:last-child {
   nav > ul > li:nth-child(5),
   nav > ul > li:nth-child(6) {
     border-bottom: none;
+  }
+}
+/* 배경 */
+
+.background__fade {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.fade-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./asset/1-0.jpg");
+  background-size: cover;
+}
+
+/* 색션 1 */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-flow: row nowrap;
+  color: #fff;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.section01--wrap {
+  align-self: center;
+  justify-self: center;
+  width: 50%;
+  max-width: 860px;
+}
+.section01--wrap--logo {
+  max-width: 610px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.section01--wrap--logo svg {
+  width: 80%;
+}
+.section01--wrap--button {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section01--wrap--button a {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 5;
+}
+.roundAnimation {
+  z-index: 4;
+  position: absolute;
+}
+.roundAnimation > div {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  opacity: 0;
+  animation-name: roundAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.roundAnimation > div:last-child {
+  animation-delay: 1s;
+}
+.section01--wrap--button:hover > .roundAnimation > div {
+  border: 5px solid #fff;
+}
+
+@keyframes roundAnimation {
+  from {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+.scrollImg {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+.browserGuide {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  text-align: right;
+  font-size: 11px;
+  color: #bbb;
+}
+@media (max-width: 1025px) {
+  .section01--wrap {
+    width: 100%;
+  }
+  .scrollImg {
+    bottom: 70px;
+  }
+  .browserGuide {
+    max-width: 130px;
+    bottom: 103px;
+    word-break: keep-all;
+    color: #fff;
+    font-weight: 600;
   }
 }
