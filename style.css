@@ -26,6 +26,14 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+.mobileBr {
+  display: none;
+}
+@media (max-width: 1025px) {
+  .mobileBr {
+    display: block;
+  }
+}
 
 /* 네비게이션 */
 
@@ -276,12 +284,10 @@ nav > ul > li:last-child {
 .section-2__wrap {
   width: 56%;
 }
-.galleryIntroduce {
-  width: 56%;
-}
 .subTitle {
   font-size: 27px;
   margin-bottom: 45px;
+  word-break: keep-all;
 }
 .sectionContent {
   font-size: 15.5px;
@@ -327,6 +333,20 @@ nav > ul > li:last-child {
   padding: 0 40px;
   word-break: keep-all;
   font-size: 15.5px;
+}
+@media (max-width: 1025px) {
+  .section-2__wrap {
+    width: 88%;
+  }
+  .subTitle,
+  .contentInfo--item h6 {
+    font-size: 20px;
+  }
+  .sectionContent,
+  .contentInfo--item p {
+    font-size: 13px;
+    line-height: 18px;
+  }
 }
 
 /* 색션 3 */
