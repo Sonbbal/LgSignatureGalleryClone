@@ -356,6 +356,7 @@ nav > ul > li:last-child {
   text-align: center;
   color: #fff;
   background-image: url("./asset/2-5.jpg");
+  background-size: cover;
 }
 .section-3__wrap {
   width: 860px;
@@ -449,5 +450,78 @@ nav > ul > li:last-child {
   }
   .designStory--introduce--info {
     width: 100%;
+  }
+}
+
+/* 색션 4 */
+.section-4 {
+  background-image: url("./asset/8-1.jpg");
+  background-size: cover;
+  position: relative;
+  color: #000;
+}
+.section-4::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+}
+.section-4__wrap {
+  width: 860px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.section-4__logo {
+  margin-bottom: 50px;
+}
+.section-4__explain {
+  font-size: 15.5;
+  margin-bottom: 30px;
+}
+.section-4 .main__video {
+  position: relative;
+}
+.section-4 .subTitle {
+  font-size: 22px;
+}
+.section-4 .main__video img {
+  position: relative;
+  opacity: 0;
+  width: 100%;
+}
+.section-4 .main__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sub__video {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.sub__video__container {
+  list-style: none;
+  width: calc(25% - 20px);
+}
+.sub__video__container img {
+  width: 100%;
+}
+.videoList > p {
+  margin: 40px 0 15px;
+}
+
+@media (max-width: 1025px) {
+  .section-4__wrap {
+    width: 88%;
+  }
+  .sub__video__container {
+    width: calc(50% - 10px);
   }
 }
