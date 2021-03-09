@@ -587,3 +587,88 @@ nav > ul > li:last-child {
     min-height: 650px;
   }
 }
+
+/* 색션 6 */
+
+.section-6 {
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.section-6__wrap {
+  width: 860px;
+  margin: 0 auto;
+}
+.section-6__imgTitle {
+  margin-bottom: 25px;
+}
+.section-6__intro {
+  font-size: 15.5px;
+  line-height: 27px;
+}
+.section-6__content {
+}
+.section-6__content ul {
+  margin-top: 30px;
+  display: flex;
+  border: 1px solid #fff;
+}
+
+.section-6__content li {
+  list-style: none;
+  width: calc(100% / 3);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 45px 0;
+}
+.section-6__content li > div {
+  min-height: 150px;
+}
+.section-6__content li > span {
+  width: 97px;
+  height: 25px;
+  font-size: 15.5px;
+  background: #fff;
+  color: #000;
+  line-height: 25px;
+  margin-top: 10px;
+}
+.section-6__dec {
+  margin: 35px 0;
+}
+.section-6__link {
+  display: block;
+  width: 280px;
+  height: 80px;
+  color: #baa45b;
+  border: 2px solid #baa45b;
+  text-decoration: none;
+  margin: 0 auto;
+  line-height: 76px;
+  font-size: 19px;
+}
+.section-6__link:hover {
+  background: #baa45b;
+  color: #000;
+}
+
+@media (max-width: 1025px) {
+  .section-6__imgTitle {
+    max-width: 370px;
+    margin: 0 auto 25px;
+  }
+  .section-6__imgTitle img {
+    width: 100%;
+  }
+  .section-6__wrap {
+    width: 88%;
+  }
+  .section-6__intro {
+    font-size: 12px;
+  }
+  .section-6__dec {
+    font-size: 12px;
+    line-height: 27px;
+  }
+}
