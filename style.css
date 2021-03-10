@@ -436,10 +436,25 @@ nav > ul > li:last-child {
   line-height: 20px;
   word-break: keep-all;
 }
+.designStory--introduce--info__content p {
+  overflow: hidden;
+  height: 60px;
+}
+.open > p {
+  height: auto !important;
+}
+.designStory--introduce--info__content .moreBtn img {
+  transform: rotate(180deg);
+}
+
+.open > .moreBtn > img {
+  transform: rotate(0);
+}
 .moreBtn {
   margin-top: 15px;
   display: block;
   text-align: center;
+  cursor: pointer;
 }
 
 @media (max-width: 1025px) {

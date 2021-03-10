@@ -74,3 +74,15 @@ SCROLL_BTN.addEventListener("click", (e) => {
   e.preventDefault();
   window.scrollTo({ top: 50, left: 0, behavior: "smooth" });
 });
+
+// 색션 3 더보기 버튼
+
+const moreBtn = document.querySelector(".moreBtn");
+const openTarget = document.querySelector(
+  ".designStory--introduce--info__content"
+);
+console.log(moreBtn, openTarget);
+moreBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  openTarget.classList.toggle("open");
+});
