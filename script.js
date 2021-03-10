@@ -81,8 +81,85 @@ const moreBtn = document.querySelector(".moreBtn");
 const openTarget = document.querySelector(
   ".designStory--introduce--info__content"
 );
-console.log(moreBtn, openTarget);
 moreBtn.addEventListener("click", (e) => {
   e.preventDefault();
   openTarget.classList.toggle("open");
+});
+
+// 색션 4 비디오 변경
+
+const subVideoElement = document.querySelectorAll(".sub__video__container");
+let mainItemKey = 0;
+let subItemKey = [1, 2, 3, 4];
+
+const data = [
+  {
+    key: 0,
+    innerText: "시그니처관 풀버전",
+    videoSrc: "https://www.youtube.com/embed/v_3i6R2F56E",
+    imgSrc: "zone_0.jpg",
+  },
+  {
+    key: 1,
+    innerText: "냉장고 Zone 전시",
+    videoSrc: "https://www.youtube.com/embed/kHXl9X8B1ro",
+    imgSrc: "zone_1.jpg",
+  },
+  {
+    key: 2,
+    innerText: "세탁기 Zone 전시",
+    videoSrc: "https://www.youtube.com/embed/AUfl0sOlVP0",
+    imgSrc: "zone_2.jpg",
+  },
+  {
+    key: 3,
+    innerText: "TV Zone 전시",
+    videoSrc: "https://www.youtube.com/embed/zFALwzn1gyA",
+    imgSrc: "zone_3.jpg",
+  },
+  {
+    key: 4,
+    innerText: "에어컨 Zone 전시",
+    videoSrc: "https://www.youtube.com/embed/zCUDPsIf4pY",
+    imgSrc: "zone_4.jpg",
+  },
+];
+
+const mainVideoHandler = (item) => {
+  document.querySelector("#main__video__title").innerText = item.innerText;
+  document.querySelector("#youtube360 > iframe").src = item.videoSrc;
+};
+
+const subVideoHandler = (clickedNumber, mainItemNumber) => {
+  const imgBaseUrl = subVideoElement[clickedNumber].querySelector(
+    ".sub__video__img"
+  );
+  const subVideoTitle = subVideoElement[clickedNumber].querySelector(
+    ".sub__video__title"
+  );
+  let mainKey = mainItemNumber;
+  let selectKey = subItemKey[clickedNumber];
+
+  // 이미지 주소 변경
+  imgBaseUrl.src = imgBaseUrl.src.slice(0, -10) + data[mainItemNumber].imgSrc;
+  // 타이틀 변경
+  subVideoTitle.innerText = data[mainItemNumber].innerText;
+  // 키 number 변경
+  mainItemKey = subItemKey[clickedNumber];
+  subItemKey[clickedNumber] = mainKey;
+
+  mainVideoHandler(data[selectKey]);
+};
+
+subVideoElement[0].addEventListener("click", () => {
+  subVideoHandler(0, mainItemKey);
+});
+subVideoElement[1].addEventListener("click", () => {
+  subVideoHandler(1, mainItemKey);
+});
+subVideoElement[2].addEventListener("click", () => {
+  subVideoHandler(2, mainItemKey);
+});
+subVideoElement[3].addEventListener("click", () => {
+  subVideoHandler(3, mainItemKey);
 });
